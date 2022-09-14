@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const {string} = require("yup");
 
 const useSchema = mongoose.Schema({
     username: {
@@ -13,11 +14,22 @@ const useSchema = mongoose.Schema({
         unique: true,
 
     },
-    passward: {
+    password: {
         type: String,
         require: true,
 
+    },
+    isAdmin: {
+        type: Boolean,
+        default:false
     }
+    
+    
+    
+    
+
+    
+
 
 
 
